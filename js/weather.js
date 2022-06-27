@@ -13,6 +13,7 @@ function anGeoOk(position) {
       weatherContainer.innerHTML = `${data.weather[0].main} / ${data.main.temp}`;
     });
 }
+
 function anGeoError() {
   alert("Can't find you. No weather for you.");
 }
