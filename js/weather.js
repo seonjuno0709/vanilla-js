@@ -10,7 +10,7 @@ function anGeoOk(position) {
       const nameContainer = document.querySelector("#weather span:first-child");
       const weatherContainer = document.querySelector("#weather span:last-child");
       nameContainer.innerHTML = data.name;
-      weatherContainer.innerHTML = `${data.weather[0].main} / ${data.main.temp}`;
+      weatherContainer.innerHTML = `${data.weather[0].main} / ${Math.round((data.main.temp - 273.15) * 100) / 100}` + " ℃";
     });
 }
 
